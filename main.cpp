@@ -65,9 +65,9 @@ public:
     void deluj() override {
         int akcija = std::rand() % 100;
         if (akcija < 10) {
-            protest = true; // Pojedinci
+            protest = true; 
         } else if (akcija < 30) {
-            protest = true; // Grupa (rudari, doktori, itd.)
+            protest = true; 
         } else {
             protest = false;
         }
@@ -162,7 +162,6 @@ public:
             agent->deluj();
         }
 
-        // Odredivanje dogadaja
         int dogadjaj = std::rand() % 100;
         if (dogadjaj < 10) {
             tenzije = true;
@@ -233,11 +232,9 @@ public:
             }
         }
 
-        // Ažuriranje BDP-a i populacije
         azurirajBDP();
         azurirajPopulaciju();
 
-        // Prikaz izveštaja
         for (Agent* agent : agenti) {
             std::cout << agent->izvestaj();
         }
@@ -255,10 +252,9 @@ public:
             razlogRaspada = "Stabilnost je pala na 0%.";
             std::cout << "Drzava se raspala zbog potpune destabilizacije.\n";
             std::cout << "Razlog raspada: " << razlogRaspada << "\n";
-            return; // Kraj simulacije
+            return; 
         }
 
-        // Pauza izmedu godina
         std::this_thread::sleep_for(std::chrono::seconds(5));
     }
 
