@@ -32,7 +32,7 @@ Compile the program using a C++ compiler.
 Run the executable to start the simulation.
 
 g++ -o main.cpp
-Or duble click on Project1.exe
+or duble click on main.exe
 
 
 Requirements:
